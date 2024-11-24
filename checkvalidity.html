@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="e" min="100" max="400" required>
+    <button id="button" onclick="myFunction()">Submit</button>
+    <p>Please fill in this field with a number between 100 and 400!</p>
+    <p id="hi"></p>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("e");
+            if(!x.checkValidity()){
+                document.getElementById("hi").innerHTML = x.validationMessage;
+            }
+            else{
+                document.getElementById("hi").innerHTML = "Input is nice! Thanks alot!"
+            }
+        }
+    </script>
+</body>
+</html>
